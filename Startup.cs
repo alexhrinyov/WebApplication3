@@ -5,8 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication3.Middlewares;
 
 namespace WebApplication3
 {
@@ -29,16 +31,31 @@ namespace WebApplication3
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            // обрабатываем ошибки HTTP
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
             app.UseRouting();
+            Console.WriteLine($"Launching project from: {env.ContentRootPath}");
+            //app.Use(async (context, next) =>
+            //{
+            //    string filePath = Path.Combine(Directory.GetCurrentDirectory(), "RequestLog.txt");
 
-            app.Use(async (context, next) =>
-            {
-                // Для логирования данных о запросе используем свойства объекта HttpContext
-                Console.WriteLine($"[{DateTime.Now}]: New request to http://{context.Request.Host.Value + context.Request.Path}");
-                await next.Invoke();
-            });
+            //    using (StreamWriter sw = new StreamWriter(filePath, true))
+            //    {
+            //        await sw.WriteLineAsync($"[{DateTime.Now}]: New request to http://{context.Request.Host.Value + context.Request.Path}");
+            //    }
+            //    await next.Invoke();
+            //});
 
+            //app.Use(async (context, next) =>
+            //{
+            //    Для логирования данных о запросе используем свойства объекта HttpContext
+            //    Console.WriteLine($"[{DateTime.Now}]: New request to http://{context.Request.Host.Value + context.Request.Path}");
+            //    await next.Invoke();
+            //});
+
+            // Метод заменяет закомментированное выше
+            app.UseMiddleware<LoggingMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
@@ -64,10 +81,10 @@ namespace WebApplication3
             app.Map("/config", Config);
 
             // Обработчик для ошибки "страница не найдена"
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync($"Page not found");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync($"Page not found");
+            //});
         }
 
         /// <summary>

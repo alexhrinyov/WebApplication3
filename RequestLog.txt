@@ -1,0 +1,24 @@
+﻿
+[01.05.2023 16:11:30]: New request to http://localhost:5000/about
+[01.05.2023 16:11:30]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:12:02]: New request to http://localhost:5000/
+[01.05.2023 16:12:02]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:13:12]: New request to http://localhost:5000/
+[01.05.2023 16:13:12]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:17:15]: New request to http://localhost:5000/
+[01.05.2023 16:17:15]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:27:46]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:30:35]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:30:48]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:31:12]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:33:56]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:39:46]: New request to http://localhost:5000/index.html
+[01.05.2023 16:39:46]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:45:25]: New request to http://localhost:5000/index.html
+[01.05.2023 16:45:25]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:45:51]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:53:53]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:54:13]: New request to http://localhost:5000/uuu
+[01.05.2023 16:54:14]: New request to http://localhost:5000/favicon.ico
+[01.05.2023 16:54:42]: New request to http://localhost:5000/uuu
+[01.05.2023 16:54:43]: New request to http://localhost:5000/favicon.ico
